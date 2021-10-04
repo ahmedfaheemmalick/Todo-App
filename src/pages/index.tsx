@@ -18,6 +18,11 @@ const ADD_TODOS = gql`
   }
 `;
 
+interface todo {
+  id: number,
+  todo: string
+}
+
 const Home = () => {
   const [input, setInput] = useState("");
 
@@ -53,7 +58,7 @@ const Home = () => {
       </form>
       <ul>
         {data &&
-          data.todos.map((todo, index) => <li key={index}>{todo.todo}</li>)}
+          data.todos.map((todo: todo, index: number) => <li key={index}>{todo.todo}</li>)}
       </ul>
     </div>
   );
