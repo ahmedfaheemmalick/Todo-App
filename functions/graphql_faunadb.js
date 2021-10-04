@@ -1,6 +1,5 @@
 const { ApolloServer, gql } = require("apollo-server-lambda");
 const faunadb = require("faunadb");
-const { copyFileSync } = require("fs");
 const q = faunadb.query;
 
 const typeDefs = gql`
